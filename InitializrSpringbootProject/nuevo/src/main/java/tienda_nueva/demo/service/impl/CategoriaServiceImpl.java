@@ -4,47 +4,44 @@
  */
 package tienda_nueva.demo.service.impl;
 
-import tienda_nueva.demo.dao.CategoriaDao;
-import tienda_nueva.demo.domain.Categoria;
-import tienda_nueva.demo.service.CategoriaService;
+import tienda.demo.dao.CategoriaDao;
+import tienda.demo.domain.Categoria;
+import tienda.demo.service.CategoriaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+
 @Service
 public class CategoriaServiceImpl implements CategoriaService {
-
-     @Autowired
+    
+    @Autowired//se conecta durectamente con este de abajo
     private CategoriaDao categoriaDao;
 
     @Override
-    @Transactional(readOnly = true)
+    @Transactional(readOnly=true)//dimplemente se lee lo que hay en la base de datos
     public List<Categoria> getCategorias(boolean activos) {
-        var lista = categoriaDao.findAll();
+        var lista=categoriaDao.findAll();//obtenemos todos los objetos de la categoria de la base de datos
         if (activos) {
-            lista.removeIf(e -> !e.isActivo());
+           lista.removeIf(e -> !e.isActivo());
         }
         return lista;
     }
 
     @Override
-    @Transactional(readOnly = true)
     public Categoria getCategoria(Categoria categoria) {
         return categoriaDao.findById(categoria.getIdCategoria()).orElse(null);
     }
 
     @Override
-    @Transactional
     public void save(Categoria categoria) {
-        categoriaDao.save(categoria);
+       categoriaDao.save(categoria);
     }
 
     @Override
-    @Transactional
     public void delete(Categoria categoria) {
         categoriaDao.delete(categoria);
     }
     
 }
-

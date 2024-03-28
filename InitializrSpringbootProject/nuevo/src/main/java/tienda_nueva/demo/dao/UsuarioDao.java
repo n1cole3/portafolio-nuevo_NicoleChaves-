@@ -4,15 +4,12 @@
  */
 package tienda_nueva.demo.dao;
 
-
-import tienda_nueva.demo.domain.Categoria;
 import org.springframework.data.jpa.repository.JpaRepository;
+import tienda_nueva.demo.domain.Usuario;
 
-/*
- El Dao lo que hace es darme conexion con la base de datos 
- Por lo tanto hay que ver que entidad hay en la base de datos para cambiarlo aca 
-*/
 
-public interface CategoriaDao extends JpaRepository <Categoria,Long> {
+public interface UsuarioDao extends JpaRepository<Usuario, Long>{
+    
+    Usuario findByUsername(String username);
     
 }

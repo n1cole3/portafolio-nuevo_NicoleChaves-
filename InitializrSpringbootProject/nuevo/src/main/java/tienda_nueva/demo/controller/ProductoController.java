@@ -4,10 +4,10 @@
  */
 package tienda_nueva.demo.controller;
 
-import tienda_nueva.demo.domain.Producto;
+import tienda_nueva.demo.domain.producto;
 import tienda_nueva.demo.service.CategoriaService;
 import tienda_nueva.demo.service.ProductoService;
-import tienda_nueva.demo.service.impl.FirebaseStorageServiceImpl;
+import tienda_nueva.demo.service.FirebaseStorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +16,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import tienda_nueva.demo.service.impl.FirebaseStorageServiceImpl;
+
+
 
 @Controller
 @RequestMapping("/producto")
