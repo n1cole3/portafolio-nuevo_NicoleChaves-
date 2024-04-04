@@ -20,9 +20,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class PruebasController {
 
     @Autowired
-    private productoService productoService;
+    private ProductoService productoService;
     @Autowired
-    private categoriaService categoriaService;
+    private CategoriaService categoriaService;
 
     @GetMapping("/listado")
     public String listado(Model model) {
@@ -35,11 +35,11 @@ public class PruebasController {
     }
 
     @GetMapping("/listado/{idCategoria}")
-    public String listado(Model model, Categoria categoria) {
-        var productos = categoriaService.getCategoria(categoria).getProductos();
+    public String listado(Model model, Categoria Categoria) {
+        var producto = CategoriaService.getCategoria(Categoria).getproductos();
         var categorias = categoriaService.getCategorias(false);
-        model.addAttribute("productos", productos);
-        model.addAttribute("totalProductos", productos.size());
+        model.addAttribute("productos", producto);
+        model.addAttribute("totalProductos", producto.size());
         model.addAttribute("categorias", categorias);
         return "/pruebas/listado";
     }

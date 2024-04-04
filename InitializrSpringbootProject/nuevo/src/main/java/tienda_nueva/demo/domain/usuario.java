@@ -1,49 +1,32 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package tienda_nueva.demo.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 import lombok.Data;
 
-import javax.validation.constraints.NotEmpty;
-@Entity
 @Data
-@Table(name="usuario")
-public class Usuario implements Serializable{
-    
-    
+@Entity
+@Table(name = "usuario")
+
+public class usuario implements Serializable {
     private static final long serialVersionUID = 1L;
-    
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)  
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column (name = "id_usuario")
     private Long idUsuario;
-    
-    @NotEmpty
     private String username;
-    
-    @NotEmpty
     private String password;
     private String nombre;
     private String apellidos;
     private String correo;
     private String telefono;
-    private String rutaImagen;
+    private String rutaImagen;    
     private boolean activo;
-    
     
     @OneToMany
     @JoinColumn(name="id_usuario")
-    private List<Rol> roles;
+    List<rol> roles;
 }
-

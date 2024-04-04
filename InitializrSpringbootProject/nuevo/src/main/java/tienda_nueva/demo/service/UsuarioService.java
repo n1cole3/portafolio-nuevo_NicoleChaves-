@@ -8,6 +8,6 @@ package tienda_nueva.demo.service;
  *
  * @author nicom
  */
-public interface UsuarioDetailsService {
+public interface UsuarioService {
     
 }

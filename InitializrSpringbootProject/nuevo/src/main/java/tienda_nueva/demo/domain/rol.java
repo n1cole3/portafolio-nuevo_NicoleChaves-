@@ -4,16 +4,9 @@
  */
 package tienda_nueva.demo.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import java.io.Serializable;
 import lombok.Data;
-
-import javax.validation.constraints.NotEmpty;
 
 /*
   Esta anotación marca esta clase como una entidad de persistencia, 
@@ -31,7 +24,7 @@ import javax.validation.constraints.NotEmpty;
 */
 @Table(name="rol")
     
-public class Rol implements Serializable{
+public class rol implements Serializable{
     
     private static final long serialVersionUID = 1L;
     
@@ -50,7 +43,7 @@ public class Rol implements Serializable{
     /*
      Esto es una bean ya echa valida que no sea vacio
     */
-    @NotEmpty
+
     private String nombre;
     
     /*

@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package tienda_nueva.demo.service.impl;
-
+/*
+import com.tienda.dao.UsuarioDao;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
@@ -11,10 +12,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import tienda.demo.domain.Usuario;
-import tienda.demo.domain.Rol;
-import tienda.demo.service.UsuarioDetailsService;
-import tienda.demo.dao.UsuarioDao;
+import tienda_nueva.demo.domain.usuario;
+import tienda_nueva.demo.domain.rol;
+import tienda_nueva.demo.service.UsuarioDetailsService;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.security.core.GrantedAuthority;
@@ -47,4 +47,4 @@ public class UsuarioDetailsServiceImpl implements UsuarioDetailsService, UserDet
         return new User(usuario.getUsername(), usuario.getPassword(), roles);
     }
 
-}
+}*/

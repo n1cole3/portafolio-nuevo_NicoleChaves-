@@ -1,0 +1,12 @@
+tienda_nueva\demo\domain\producto.class
+tienda_nueva\demo\controller\CategoriaController.class
+tienda_nueva\demo\domain\rol.class
+com\tienda\dao\UsuarioDao.class
+tienda_nueva\demo\service\impl\FirebaseStorageServiceImpl.class
+tienda_nueva\demo\domain\Categoria.class
+tienda_nueva\demo\service\ProductoService.class
+tienda_nueva\demo\domain\usuario.class
+tienda_nueva\demo\dao\ProductoDao.class
+tienda_nueva\demo\service\FirebaseStorageService.class
+tienda_nueva\demo\controller\ProductoController.class
+tienda_nueva\demo\service\CategoriaService.class

@@ -7,7 +7,6 @@ package tienda_nueva.demo.controller;
 import tienda_nueva.demo.domain.producto;
 import tienda_nueva.demo.service.CategoriaService;
 import tienda_nueva.demo.service.ProductoService;
-import tienda_nueva.demo.service.FirebaseStorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -42,7 +41,7 @@ public class ProductoController {
     }
     
      @GetMapping("/nuevo")
-    public String productoNuevo(Producto producto) {
+    public String productoNuevo(producto producto) {
         return "/producto/modifica";
     }
 
@@ -50,7 +49,7 @@ public class ProductoController {
     private FirebaseStorageServiceImpl firebaseStorageService;
     
     @PostMapping("/guardar")
-    public String productoGuardar(Producto producto,
+    public String productoGuardar(producto producto,
             @RequestParam("imagenFile") MultipartFile imagenFile) {        
         if (!imagenFile.isEmpty()) {
             productoService.save(producto);
@@ -65,13 +64,13 @@ public class ProductoController {
     }
 
     @GetMapping("/eliminar/{idProducto}")
-    public String productoEliminar(Producto producto) {
+    public String productoEliminar(producto producto) {
         productoService.delete(producto);
         return "redirect:/producto/listado";
     }
 
     @GetMapping("/modificar/{idProducto}")
-    public String productoModificar(Producto producto, Model model) {
+    public String productoModificar(producto producto, Model model) {
         producto = productoService.getProducto(producto);
         model.addAttribute("producto", producto);
         

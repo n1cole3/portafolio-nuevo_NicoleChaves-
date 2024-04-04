@@ -4,7 +4,7 @@
  */
 package tienda_nueva.demo.service;
 
-import tienda.demo.domain.Categoria;
+import tienda_nueva.demo.domain.Categoria;
 import java.util.List;
 
 public interface CategoriaService {

@@ -24,7 +24,7 @@ import lombok.Data;
  La anotacion Table hacereferencia a la tabla de la base de datos 
 */
 @Table(name="producto")
-public class Producto implements Serializable {
+public class producto implements Serializable {
     private static final long serialVersionUID = 1L;
     /*
       Esto hace referencia a la llave primaria de la base de datos por lo cual 
@@ -41,19 +41,18 @@ public class Producto implements Serializable {
     private String rutaImagen;
     private boolean activo;
 
-    @ManyToOne​
+    @ManyToOne
     @JoinColumn(name="id_categoria")
     Categoria categoria;
+    
+    public producto() {
 
-    public Producto() {      
     }
 
-    public Producto(String descripcion, String detalle, double precio, int existencias, String imagen, boolean activo) {
-        this.descripcion = descripcion;;
-        this.detalle = detalle;;
-        this.precio = precio;;
-        this.existencias = existencias;;
-        this.rutaImagen = imagen;;
-        this.activo = activo;;
+    public producto(String descripcion, String rutaImagen, boolean activo) {
+        this.descripcion = descripcion;
+        this.rutaImagen = rutaImagen;
+        this.activo = activo;
     }
+
 }
