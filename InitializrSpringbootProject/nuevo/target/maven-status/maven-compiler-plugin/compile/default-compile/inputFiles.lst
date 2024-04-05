@@ -9,6 +9,7 @@ C:\projects\portafolio-nuevo_NicoleChaves-1\InitializrSpringbootProject\nuevo\sr
 C:\projects\portafolio-nuevo_NicoleChaves-1\InitializrSpringbootProject\nuevo\src\main\java\tienda_nueva\demo\service\impl\CategoriaServiceImpl.java
 C:\projects\portafolio-nuevo_NicoleChaves-1\InitializrSpringbootProject\nuevo\src\main\java\tienda_nueva\demo\service\impl\FirebaseStorageServiceImpl.java
 C:\projects\portafolio-nuevo_NicoleChaves-1\InitializrSpringbootProject\nuevo\src\main\java\tienda_nueva\demo\service\impl\UsuarioDetailsServiceImpl.java
+C:\projects\portafolio-nuevo_NicoleChaves-1\InitializrSpringbootProject\nuevo\src\main\java\tienda_nueva\demo\service\impl\UsuarioServiceImpl.java
 C:\projects\portafolio-nuevo_NicoleChaves-1\InitializrSpringbootProject\nuevo\src\main\java\tienda_nueva\demo\dao\ProductoDao.java
 C:\projects\portafolio-nuevo_NicoleChaves-1\InitializrSpringbootProject\nuevo\src\main\java\tienda_nueva\demo\domain\rol.java
 C:\projects\portafolio-nuevo_NicoleChaves-1\InitializrSpringbootProject\nuevo\src\main\java\tienda_nueva\demo\domain\usuario.java
@@ -16,5 +17,8 @@ C:\projects\portafolio-nuevo_NicoleChaves-1\InitializrSpringbootProject\nuevo\sr
 C:\projects\portafolio-nuevo_NicoleChaves-1\InitializrSpringbootProject\nuevo\src\main\java\tienda_nueva\demo\service\UsuarioDetailsService.java
 C:\projects\portafolio-nuevo_NicoleChaves-1\InitializrSpringbootProject\nuevo\src\main\java\tienda_nueva\demo\service\impl\ProductoServiceImpl.java
 C:\projects\portafolio-nuevo_NicoleChaves-1\InitializrSpringbootProject\nuevo\src\main\java\tienda_nueva\demo\TiendaNicoleChavesNuevoApplication.java
+C:\projects\portafolio-nuevo_NicoleChaves-1\InitializrSpringbootProject\nuevo\src\main\java\tienda_nueva\demo\controller\UsuarioController.java
+C:\projects\portafolio-nuevo_NicoleChaves-1\InitializrSpringbootProject\nuevo\src\main\java\tienda_nueva\demo\dao\RolDao.java
 C:\projects\portafolio-nuevo_NicoleChaves-1\InitializrSpringbootProject\nuevo\src\main\java\tienda_nueva\demo\ProjectConfig.java
 C:\projects\portafolio-nuevo_NicoleChaves-1\InitializrSpringbootProject\nuevo\src\main\java\tienda_nueva\demo\dao\CategoriaDao.java
+C:\projects\portafolio-nuevo_NicoleChaves-1\InitializrSpringbootProject\nuevo\src\main\java\tienda_nueva\demo\service\UsuarioService.java

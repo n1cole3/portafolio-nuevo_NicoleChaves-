@@ -3,8 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package tienda_nueva.demo.service.impl;
-/*
-import com.tienda.dao.UsuarioDao;
+
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
@@ -20,6 +19,7 @@ import java.util.List;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import tienda_nueva.demo.dao.UsuarioDao;
 
 @Service("userDetailsService")
 public class UsuarioDetailsServiceImpl implements UsuarioDetailsService, UserDetailsService {
@@ -31,7 +31,7 @@ public class UsuarioDetailsServiceImpl implements UsuarioDetailsService, UserDet
     @Override
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Usuario usuario = usuarioDao.findByUsername(username);
+        usuario usuario = usuarioDao.findByUsername(username);
 
         if (usuario == null) {
             throw new UsernameNotFoundException(username);
@@ -41,10 +41,10 @@ public class UsuarioDetailsServiceImpl implements UsuarioDetailsService, UserDet
 
         List<GrantedAuthority> roles = new ArrayList<>();
 
-        for (Rol rol : usuario.getRoles()) {
+        for (rol rol : usuario.getRoles()) {
             roles.add(new SimpleGrantedAuthority(rol.getNombre()));
         }
         return new User(usuario.getUsername(), usuario.getPassword(), roles);
     }
 
-}*/
+}

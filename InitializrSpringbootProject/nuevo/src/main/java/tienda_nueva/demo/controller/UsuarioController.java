@@ -4,7 +4,8 @@
  */
 package tienda_nueva.demo.controller;
 
-import tienda_nueva.demo.domain.Usuario;
+import java.util.List;
+import tienda_nueva.demo.domain.usuario;
 import tienda_nueva.demo.service.FirebaseStorageService;
 import tienda_nueva.demo.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,17 +23,19 @@ public class UsuarioController {
 
     @Autowired
     private UsuarioService usuarioService;
-
+    
+    
+    
     @GetMapping("/listado")
     public String listado(Model model) {
-        var usuarios = usuarioService.getUsuarios();
+        List<usuario> usuarios = usuarioService.getUsuarios();
         model.addAttribute("usuarios", usuarios);
         model.addAttribute("totalUsuarios", usuarios.size());
         return "/usuario/listado";
     }
 
     @GetMapping("/nuevo")
-    public String usuarioNuevo(Usuario usuario) {
+    public String usuarioNuevo(usuario usuario) {
         return "/usuario/modifica";
     }
 
@@ -40,7 +43,7 @@ public class UsuarioController {
     private FirebaseStorageService firebaseStorageService;
 
     @PostMapping("/guardar")
-    public String usuarioGuardar(Usuario usuario,
+    public String usuarioGuardar(usuario usuario,
             @RequestParam("imagenFile") MultipartFile imagenFile) {
         if (!imagenFile.isEmpty()) {
             usuarioService.save(usuario,false);
@@ -55,13 +58,13 @@ public class UsuarioController {
     }
 
     @GetMapping("/eliminar/{idUsuario}")
-    public String usuarioEliminar(Usuario usuario) {
+    public String usuarioEliminar(usuario usuario) {
         usuarioService.delete(usuario);
         return "redirect:/usuario/listado";
     }
 
     @GetMapping("/modificar/{idUsuario}")
-    public String usuarioModificar(Usuario usuario, Model model) {
+    public String usuarioModificar(usuario usuario, Model model) {
         usuario = usuarioService.getUsuario(usuario);
         model.addAttribute("usuario", usuario);
         return "/usuario/modifica";

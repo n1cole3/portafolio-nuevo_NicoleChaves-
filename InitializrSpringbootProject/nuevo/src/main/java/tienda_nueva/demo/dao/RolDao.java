@@ -4,10 +4,11 @@
  */
 package tienda_nueva.demo.dao;
 
-import tienda_nueva.demo.domain.Rol;
+import tienda_nueva.demo.domain.rol;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
-public interface RolDao extends JpaRepository<Rol, Long> {
+public interface RolDao extends JpaRepository<rol, Long> {
+
     
 }
